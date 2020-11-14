@@ -1,0 +1,7 @@
+<launch>
+  <arg name="eband"          default="dwb"             doc="Local planner can be either dwa, eband, base, teb or pose" />
+
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
+    <arg name="local_planner" value="$(arg eband)"/>
+  </include>
+</launch>
